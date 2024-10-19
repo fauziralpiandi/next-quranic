@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 export default {
-  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  content: ['./app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -20,18 +20,23 @@ export default {
         },
       },
       keyframes: {
-        'in': {
+        in: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { oppacity: '1', transform: 'translateY(0)' },
+        },
+        out: {
+          '0%': { opacity: '1', transform: 'translateY(0px)' },
+          '100%': { opacity: '0', transform: 'translateY(-10px)' },
+        },
+        fade: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        'in-reverse': {
-          '0%': { opacity: '1' },
-          '100%': { opacity: '0' },
-        },
       },
       animation: {
-        'in': 'in 300ms both',
-        'in-reverse': 'in-reverse 300ms both',
+        in: 'in 350ms both',
+        out: 'out 250ms both',
+        fade: 'fade 1000ms both',
       },
     },
   },
