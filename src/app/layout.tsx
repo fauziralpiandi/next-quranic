@@ -3,7 +3,7 @@ import { Radio_Canada } from 'next/font/google'
 
 import '~/globals.css'
 
-import { site, verify } from '~/head'
+import { site, verify } from '~/siteConfig'
 import { Header, Footer } from '~/Layouts'
 
 const font = Radio_Canada({

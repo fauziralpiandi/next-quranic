@@ -24,7 +24,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "app/*",
+        "src/app/*",
         "src/libs/*",
         "src/components/*",
       ]

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { site } from '~/head'
+import { site } from '~/siteConfig'
 
 export function Header() {
   return (
