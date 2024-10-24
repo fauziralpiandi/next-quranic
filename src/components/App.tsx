@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-import { nextQuranic } from '~/hooks'
+import { useNextQuranic } from '~/hooks'
 import Wrapper from '~/Wrapper'
 import {
   handleTouchEvents,
@@ -16,7 +16,7 @@ export default function NextQuranicShuffle() {
   )
   const [isTransitioning, setIsTransitioning] = useState(false)
   const { setAyahIndex, ayahIndex, allAyahs, tafsir, error } =
-    nextQuranic(language)
+    useNextQuranic(language)
 
   useEffect(() => {
     const touchStartHandler = handleTouchEvents((newLanguage) =>

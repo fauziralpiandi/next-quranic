@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { Quran, Tafsir } from '~/types.d'
 import { fetchAllAyahs, fetchTafsir } from '~/api'
 
-export const nextQuranic = (language: 'id.indonesian' | 'en.sahih') => {
+export const useNextQuranic = (language: 'id.indonesian' | 'en.sahih') => {
   const [ayahIndex, setAyahIndex] = useState<number | null>(null)
   const [allAyahs, setAllAyahs] = useState<Quran[] | null>(null)
   const [tafsir, setTafsir] = useState<Tafsir | null>(null)
